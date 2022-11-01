@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Image HorizontalAlignment="Center" Height="1000" VerticalAlignment="Center" Width="1500" Source="/Resources/greenfelt.jpg" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Center" Height="1000" VerticalAlignment="Center" Width="1500" Source="/Resources/greenfelt.jpg" Stretch="Fill"/>
         <Button Content="Button" Margin="506,109,0,0" VerticalAlignment="Top" Height="199" Width="433" Click="Button_Click"/>
     </Grid>
 </Page>
