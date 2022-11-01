@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Card.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -138,7 +139,60 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Resources\10C.png" />
+    <Content Include="Resources\10D.png" />
+    <Content Include="Resources\10H.png" />
+    <Content Include="Resources\10S.png" />
+    <Content Include="Resources\2C.png" />
+    <Content Include="Resources\2D.png" />
+    <Content Include="Resources\2H.png" />
+    <Content Include="Resources\2S.png" />
+    <Content Include="Resources\3C.png" />
+    <Content Include="Resources\3D.png" />
+    <Content Include="Resources\3H.png" />
+    <Content Include="Resources\3S.png" />
+    <Content Include="Resources\4C.png" />
+    <Content Include="Resources\4D.png" />
+    <Content Include="Resources\4H.png" />
+    <Content Include="Resources\4S.png" />
+    <Content Include="Resources\5C.png" />
+    <Content Include="Resources\5D.png" />
+    <Content Include="Resources\5H.png" />
+    <Content Include="Resources\5S.png" />
+    <Content Include="Resources\6C.png" />
+    <Content Include="Resources\6D.png" />
+    <Content Include="Resources\6H.png" />
+    <Content Include="Resources\6S.png" />
+    <Content Include="Resources\7C.png" />
+    <Content Include="Resources\7D.png" />
+    <Content Include="Resources\7H.png" />
+    <Content Include="Resources\7S.png" />
+    <Content Include="Resources\8C.png" />
+    <Content Include="Resources\8D.png" />
+    <Content Include="Resources\8H.png" />
+    <Content Include="Resources\8S.png" />
+    <Content Include="Resources\9C.png" />
+    <Content Include="Resources\9D.png" />
+    <Content Include="Resources\9H.png" />
+    <Content Include="Resources\9S.png" />
+    <Content Include="Resources\AC.png" />
+    <Content Include="Resources\AD.png" />
+    <Content Include="Resources\AH.png" />
+    <Content Include="Resources\AS.png" />
+    <Content Include="Resources\b1fv.png" />
     <Content Include="Resources\greenfelt.jpg" />
+    <Content Include="Resources\JC.png" />
+    <Content Include="Resources\JD.png" />
+    <Content Include="Resources\JH.png" />
+    <Content Include="Resources\JS.png" />
+    <Content Include="Resources\KC.png" />
+    <Content Include="Resources\KD.png" />
+    <Content Include="Resources\KH.png" />
+    <Content Include="Resources\KS.png" />
+    <Content Include="Resources\QC.png" />
+    <Content Include="Resources\QD.png" />
+    <Content Include="Resources\QH.png" />
+    <Content Include="Resources\QS.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

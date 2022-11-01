@@ -26,5 +26,15 @@ namespace MrGraen
         {
             this.InitializeComponent();
         }
+
+        List<Card> playerList = new List<Card>()
+        {
+            new Card() { Value = 0, Name = "null", Image = "null"}
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
