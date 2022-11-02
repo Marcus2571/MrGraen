@@ -10,6 +10,8 @@
 
     <Grid>
         <Image HorizontalAlignment="Center" Height="1000" VerticalAlignment="Center" Width="1500" Source="/Resources/greenfelt.jpg" Stretch="Fill"/>
-        <Button Content="Button" Margin="506,109,0,0" VerticalAlignment="Top" Height="199" Width="433" Click="Button_Click"/>
+        <Button x:Name="Startbtn" Content="Button" Margin="506,109,0,0" VerticalAlignment="Top" Height="199" Width="433" Click="Startbtn_Click"/>
+        <Image HorizontalAlignment="Left" Height="496" Margin="75,109,0,0" VerticalAlignment="Top" Width="426"/>
+        <TextBox x:Name="ResultLabel" HorizontalAlignment="Left" Margin="255,537,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="285" Width="563" IsReadOnly="True"/>
     </Grid>
 </Page>
