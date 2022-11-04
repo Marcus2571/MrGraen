@@ -13,6 +13,5 @@ namespace MrGraen
         public int Value { get; set; }
         public string Name { get; set; }
         public BitmapImage Image { get; set; }
-
     }
 }
