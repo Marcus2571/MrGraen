@@ -6,12 +6,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1920" Height="1076">
 
-    <Grid>
-        <Image HorizontalAlignment="Center" Height="1000" VerticalAlignment="Center" Width="1500" Source="/Resources/greenfelt.jpg" Stretch="Fill"/>
-        <Button x:Name="Startbtn" Content="Button" Margin="506,109,0,0" VerticalAlignment="Top" Height="199" Width="433" Click="Startbtn_Click"/>
-        <Image HorizontalAlignment="Left" Height="496" Margin="75,109,0,0" VerticalAlignment="Top" Width="426"/>
-        <TextBox x:Name="ResultLabel" HorizontalAlignment="Left" Margin="255,537,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="285" Width="563" IsReadOnly="True"/>
+    <Grid x:Name="blackjackGrid">
+        <Image HorizontalAlignment="Center" Height="1078" VerticalAlignment="Center" Width="1920" Source="/Resources/greenfelt.jpg" Stretch="Fill"/>
+        <Button x:Name="Startbtn" Content="Start" Margin="10,443,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Startbtn_Click" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="Hitbtn" Content="Hit" Margin="10,505,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Hitbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
+        <Button x:Name="Standbtn" Content="Stand" Margin="10,567,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Standbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
+        <TextBox x:Name="PlayerCardSumLbl" HorizontalAlignment="Left" Margin="10,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False" FontWeight="Bold" Opacity="0.8"/>
+        <TextBox x:Name="DealerCardSumLbl" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" IsHitTestVisible="False" IsTabStop="False" IsTextPredictionEnabled="False" Opacity="0.8"/>
+        <TextBox x:Name="PlayerCardsLbl" HorizontalAlignment="Left" Margin="10,313,0,0" TextWrapping="Wrap" Text="Player Cards:" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False"/>
+        <TextBox x:Name="DealerCardsLbl" HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="Dealer Cards:" VerticalAlignment="Top" Height="35" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" IsHitTestVisible="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
+        <Image x:Name="PlayerCard1" HorizontalAlignment="Left" Height="182" Margin="183,240,0,0" VerticalAlignment="Top" Width="136"/>
+        <Image x:Name="DealerCard1" HorizontalAlignment="Left" Height="182" Margin="183,38,0,0" VerticalAlignment="Top" Width="136"/>
+        <Image x:Name="PlayerCard2" HorizontalAlignment="Left" Height="182" Margin="324,240,0,0" VerticalAlignment="Top" Width="136"/>
+        <Image x:Name="DealerCard2" HorizontalAlignment="Left" Height="182" Margin="324,38,0,0" VerticalAlignment="Top" Width="136"/>
     </Grid>
 </Page>
