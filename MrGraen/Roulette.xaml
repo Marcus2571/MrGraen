@@ -1,0 +1,144 @@
+﻿<Page
+    x:Class="MrGraen.Roulette"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MrGraen"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Background="#FF00813E" Height="1123" Width="1536">
+
+    <Page.Resources>
+        <Style x:Key="CircleButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundTransparentBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="8,4,8,4"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BorderCircle">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseHighBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BorderCircle">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseHighBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BorderCircle">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="BorderCircle">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter" VerticalAlignment="Center" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Ellipse x:Name="BorderCircle" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="0,0,0,307">
+        <Image HorizontalAlignment="Left" Height="487" Margin="10,95,0,0" VerticalAlignment="Top" Width="505" Source="/Assets/blackjack-wheel.png"/>
+        <Image HorizontalAlignment="Center" Height="124" Margin="0,672,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="365" Margin="558,216,0,0" VerticalAlignment="Top" Width="817" Source="/Assets/Roulette.jpg"/>
+        <Button x:Name="Green0Button" Height="179" Margin="571,236,0,0" VerticalAlignment="Top" Width="59" Click="Green0Button_Click"/>
+        <Button x:Name="ButtonRed" Content="Red" Margin="866,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonRed_Click"/>
+        <Button x:Name="ButtonBlack" Content="Black" Margin="979,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonBlack_Click"/>
+        <Button x:Name="OddButton" Content="" Margin="1090,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="OddButton_Click"/>
+        <Button x:Name="EvenButton" Content="" Margin="753,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="EvenButton_Click"/>
+        <Button x:Name="Button1to12" Margin="636,425,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button1to12_Click"/>
+        <Button x:Name="Button12to24" Margin="864,425,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button12to24_Click"/>
+        <Button x:Name="Button24to36" Margin="1088,425,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button24to36_Click"/>
+        <Button x:Name="Button1to18" Content="" Margin="641,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="Button1to18_Click"/>
+        <Button x:Name="Button19to36" Content="" Margin="1205,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="Button19to36_Click"/>
+        <Button x:Name="Button3" Margin="638,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button3_Click"/>
+        <Button x:Name="Button2" Margin="638,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button2_Click"/>
+        <Button x:Name="Button1" Margin="638,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button1_Click"/>
+        <Button x:Name="Button4" Margin="694,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button4_Click"/>
+        <Button x:Name="Button5" Margin="694,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button5_Click"/>
+        <Button x:Name="Button6" Margin="694,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button6_Click"/>
+        <Button x:Name="Button9" Margin="748,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button9_Click"/>
+        <Button x:Name="Button8" Margin="750,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button8_Click"/>
+        <Button x:Name="Button7" Margin="748,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button7_Click"/>
+        <Button x:Name="Button10" Margin="806,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button10_Click"/>
+        <Button x:Name="Button11" Margin="806,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button11_Click"/>
+        <Button x:Name="Button12" Margin="806,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button12_Click"/>
+        <Button x:Name="Button15" Margin="862,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button15_Click"/>
+        <Button x:Name="Button14" Margin="862,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button14_Click"/>
+        <Button x:Name="Button13" Margin="862,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button13_Click"/>
+        <Button x:Name="Button16" Margin="918,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button16_Click"/>
+        <Button x:Name="Button17" Margin="918,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button17_Click"/>
+        <Button x:Name="Button18" Margin="918,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button18_Click"/>
+        <Button x:Name="Button21" Margin="974,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button21_Click"/>
+        <Button x:Name="Button20" Margin="974,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button20_Click"/>
+        <Button x:Name="Button19" Margin="974,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button19_Click"/>
+        <Button x:Name="Button22" Margin="1030,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button22_Click"/>
+        <Button x:Name="Button23" Margin="1030,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button23_Click"/>
+        <Button x:Name="Button24" Margin="1030,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button24_Click"/>
+        <Button x:Name="Button27" Margin="1088,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button27_Click"/>
+        <Button x:Name="Button26" Margin="1088,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button26_Click"/>
+        <Button x:Name="Button25" Margin="1088,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button25_Click"/>
+        <Button x:Name="Button28" Margin="1144,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button28_Click"/>
+        <Button x:Name="Button29" Margin="1144,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button29_Click"/>
+        <Button x:Name="Button30" Margin="1144,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button30_Click"/>
+        <Button x:Name="Button33" Margin="1200,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button33_Click"/>
+        <Button x:Name="Button32" Margin="1200,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button32_Click"/>
+        <Button x:Name="Button31" Margin="1200,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button31_Click"/>
+        <Button x:Name="Button34" Margin="1256,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button34_Click"/>
+        <Button x:Name="Button35" Margin="1256,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button35_Click"/>
+        <Button x:Name="Button36" Margin="1256,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button36_Click"/>
+        <Button x:Name="ButtonLine1" Margin="1312,236,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine1_Click"/>
+        <Button x:Name="ButtonLine2" Margin="1312,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine2_Click"/>
+        <Button x:Name="ButtonLine3" Margin="1312,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine3_Click"/>
+        <Button x:Name="SpinButton" Content="Spin" Margin="922,688,0,0" VerticalAlignment="Top" Width="191" Height="93" Click="SpinButton_Click"/>
+        <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" Margin="170,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44"/>
+        <Button x:Name="Bet5Button" Height="111" Margin="154,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet5Button_Click" CornerRadius="60"/>
+        <Button x:Name="Bet25Button" Height="114" Margin="299,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet25Button_Click" CornerRadius="60"/>
+        <Button x:Name="Bet500Button" Height="114" Margin="590,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet500Button_Click" CornerRadius="60"/>
+        <Button x:Name="Bet100Button" Height="114" Margin="445,678,0,0" VerticalAlignment="Top" Width="114" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" />
+        <Button x:Name="Bet1000Button" Height="114" Margin="734,677,0,0" VerticalAlignment="Top" Width="114" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60"/>
+        <TextBlock x:Name="balanceLabel" HorizontalAlignment="Left" Margin="1205,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44" Text="Balance: " FontSize="22"/>
+        <Button x:Name="Bet1Button" Height="111" Margin="10,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet1Button_Click" CornerRadius="60"/>
+    </Grid>
+
+</Page>
