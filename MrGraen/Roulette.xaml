@@ -5,9 +5,9 @@
     xmlns:local="using:MrGraen"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Background="#FF00813E" Height="1080" Width="1920">
+    mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Height="1080" Width="1920">
 
-    <Grid Width="1536" Margin="10,0,374,215">
+    <Grid Width="1536" Margin="10,0,374,215" Background="#FF00813E">
         <Image HorizontalAlignment="Left" Height="487" Margin="10,20,0,0" VerticalAlignment="Top" Width="505" Source="/Assets/blackjack-wheel.png"/>
         <Image HorizontalAlignment="Left" Height="365" Margin="558,141,0,0" VerticalAlignment="Top" Width="817" Source="/Assets/Roulette.jpg"/>
         <Image HorizontalAlignment="Center" Height="124" Margin="0,591,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
@@ -60,9 +60,9 @@
         <Button x:Name="ButtonLine1" Margin="1312,161,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine1_Click"/>
         <Button x:Name="ButtonLine2" Margin="1312,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine2_Click"/>
         <Button x:Name="ButtonLine3" Margin="1312,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine3_Click"/>
-        <Button x:Name="SpinButton" Content="Spin" Margin="922,613,0,0" VerticalAlignment="Top" Width="191" Height="93" Click="SpinButton_Click"/>
+        <Button x:Name="SpinButton" Content="Spin" Margin="920,613,0,0" VerticalAlignment="Top" Width="191" Height="93" Click="SpinButton_Click"/>
         <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" Margin="170,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44"/>
-        <Button x:Name="Bet1Button" Height="111" Margin="15,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet1Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet1Button" Height="111" Margin="13,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet1Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -79,7 +79,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet5Button" Height="111" Margin="159,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet5Button_Click" CornerRadius="65" >
+        <Button x:Name="Bet5Button" Height="111" Margin="157,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet5Button_Click" CornerRadius="65" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -96,7 +96,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet25Button" Height="111" Margin="304,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet25Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet25Button" Height="111" Margin="302,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet25Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -113,7 +113,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet500Button" Height="111" Margin="593,599,0,0" VerticalAlignment="Top" Width="109" Click="Bet500Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet500Button" Height="111" Margin="591,599,0,0" VerticalAlignment="Top" Width="109" Click="Bet500Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -130,7 +130,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet100Button" Height="111" Margin="449,599,0,0" VerticalAlignment="Top" Width="109" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet100Button" Height="111" Margin="447,599,0,0" VerticalAlignment="Top" Width="109" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -147,7 +147,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet1000Button" Height="111" Margin="738,599,0,0" VerticalAlignment="Top" Width="108" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet1000Button" Height="111" Margin="736,599,0,0" VerticalAlignment="Top" Width="108" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
