@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace MrGraen
 {
-    internal class Player : IPlayer
+    internal static class Player
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public double Balance { get; set; }
-        
+        public static int Id { get; set; }
+        public static string Name { get; set; }
+        public static double Balance { get; set; }
+
+        //public Player(double balance)
+        //{
+        //    Balance = balance;
+        //}
     }
 }

@@ -21,13 +21,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace MrGraen
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class Blackjack : Page
     {
         public Blackjack()
@@ -36,7 +32,13 @@ namespace MrGraen
 
             new Thread(new ThreadStart(PopulateDeck)).Start();
 
+            BetSumLbl.Text = bet.ToString();
+            BalanceSumLbl.Text = Player.Balance.ToString();
         }
+        //Player Player = new Player(10000);
+
+        int bet = 0;
+
 
         List<Card> playerCardList = new List<Card>();
 
@@ -267,6 +269,7 @@ namespace MrGraen
             {
                 DisplayCard(DealerCard2, dealerCard2.Image);
                 await new MessageDialog("You Have Blackjack!", "You Win!").ShowAsync();
+                Player.Balance += bet * 2.5;
                 ResetGame();
             }
             else if (playerCardSum == 21 && dealerCardSum == 21)
@@ -278,6 +281,7 @@ namespace MrGraen
                 });
                 DisplayCard(DealerCard2, dealerCard2.Image);
                 await new MessageDialog("Both You And The Dealer Has Blackjack Therefore It's a Tie!", "Push!").ShowAsync();
+                Player.Balance += bet;
                 ResetGame();
             }
             else if (playerCardSum != 21 && dealerCardSum == 21)
@@ -321,6 +325,7 @@ namespace MrGraen
             }
             dealerBox = new List<Image>();
 
+            bet = 0;
             playerCardSum = 0;
             dealerCardSum = 0;
             playerCardList.Clear();
@@ -328,9 +333,13 @@ namespace MrGraen
             totalDeck.Clear();
             new Thread(new ThreadStart(PopulateDeck)).Start();
 
-            Startbtn.IsEnabled = true;
+            Startbtn.IsEnabled = false;
             Hitbtn.IsEnabled = false;
             Standbtn.IsEnabled = false;
+            PlaceBetbtn.IsEnabled = true;
+
+            BalanceSumLbl.Text = Player.Balance.ToString();
+            BetSumLbl.Text = bet.ToString();
         }
 
         private async void PlayDealer()
@@ -374,11 +383,13 @@ namespace MrGraen
             if (dealerCardSum > 21)
             {
                 await new MessageDialog("The Dealer's Gone Bust!", "You Win!").ShowAsync();
+                Player.Balance += bet * 2;
                 ResetGame();
             }
             else if (dealerCardSum == playerCardSum && dealerCardSum >= 17)
             {
                 await new MessageDialog($"Both Yours And The Dealers Cards Has a Sum of {dealerCardSum} Therefore It's a Tie!", "Push!").ShowAsync();
+                Player.Balance += bet;
                 ResetGame();
             }
             else if (dealerCardSum > playerCardSum && dealerCardSum >= 17)
@@ -389,6 +400,7 @@ namespace MrGraen
             else if (dealerCardSum < playerCardSum && dealerCardSum >= 17)
             {
                 await new MessageDialog("", "You Win!").ShowAsync();
+                Player.Balance += bet * 2;
                 ResetGame();
             }
         }
@@ -446,9 +458,22 @@ namespace MrGraen
         }
 
 
-        private void PlaceBetbtn_Click(object sender, RoutedEventArgs e)
+        private async void PlaceBetbtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (bet <= 0 || bet > Player.Balance)
+            {
+                await new MessageDialog($"You Must Place a Bet Higher Than 0 and Less Than {Player.Balance + 1}!", "Invalid Bet!").ShowAsync();
+                bet = 0;
+                BetSumLbl.Text = bet.ToString();
+                BalanceSumLbl.Text = Player.Balance.ToString();
+                return;
+            }
+            else
+            {
+                Player.Balance -= bet;
+                Startbtn.IsEnabled = true;
+                PlaceBetbtn.IsEnabled = false;
+            }
         }
 
         private int SelectRandomCard()
@@ -516,34 +541,47 @@ namespace MrGraen
             }
         }
 
-        private void Chip1btn_Click(object sender, RoutedEventArgs e)
+        private async void UpdateBet(int playerBet)
         {
 
+            if (bet + playerBet > Player.Balance)
+            {
+                await new MessageDialog($"You Can Not Afford This Bet!", "Invalid Bet!").ShowAsync();
+                return;
+            }
+            bet += playerBet;
+            BetSumLbl.Text = bet.ToString();
+            BalanceSumLbl.Text = (Player.Balance - bet).ToString();
+        }
+
+        private void Chip1btn_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateBet(1);
         }
 
         private void Chip5btn_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateBet(5);
         }
 
         private void Chip25btn_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateBet(25);
         }
 
         private void Chip100btn_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateBet(100);
         }
 
         private void Chip500btn_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateBet(500);
         }
 
         private void Chip1000btn_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateBet(1000);
         }
     }
 }

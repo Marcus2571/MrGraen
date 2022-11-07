@@ -6,9 +6,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Width="1920" Height="1076">
-    <Page.Background>
-        <ImageBrush ImageSource="/Resources/greenfelt.jpg"/>
-    </Page.Background>
 
     <Page.Resources>
         <Style x:Key="ButtonStyle" TargetType="Button">
@@ -90,22 +87,23 @@
 
 
     <Grid x:Name="blackjackGrid" Width="1536" Margin="0,0,384,296">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/greenfelt.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <TextBox x:Name="PlayerCardSumLbl" HorizontalAlignment="Left" Margin="10,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False" FontWeight="Bold" Opacity="0.8"/>
         <TextBox x:Name="DealerCardSumLbl" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" IsHitTestVisible="False" IsTabStop="False" IsTextPredictionEnabled="False" Opacity="0.8"/>
         <TextBox x:Name="PlayerCardsLbl" HorizontalAlignment="Left" Margin="10,313,0,0" TextWrapping="Wrap" Text="Player Cards:" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False"/>
         <TextBox x:Name="DealerCardsLbl" HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="Dealer Cards:" VerticalAlignment="Top" Height="35" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" IsHitTestVisible="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
         <TextBox x:Name="BalanceLbl" HorizontalAlignment="Right" Margin="0,82,150,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False"/>
-        <TextBox x:Name="BalanceSumLbl" HorizontalAlignment="Left" Margin="1729,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" FontSize="18" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False">
-            <TextBox.Foreground>
-                <SolidColorBrush Color="White" Opacity="1"/>
-            </TextBox.Foreground>
-        </TextBox>
+        <TextBox x:Name="BalanceSumLbl" HorizontalAlignment="Left" Margin="1352,85,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" IsReadOnly="True" FontSize="18" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False" />
+        <TextBox x:Name="BetLbl" HorizontalAlignment="Right" Margin="0,110,170,0" TextWrapping="Wrap" Text="Bet:" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False"/>
+        <TextBox x:Name="BetSumLbl" HorizontalAlignment="Left" Margin="1311,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" FontSize="18" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False" />
         <Image x:Name="PlayerCard1" HorizontalAlignment="Left" Height="182" Margin="183,240,0,0" VerticalAlignment="Top" Width="136"/>
         <Image x:Name="DealerCard1" HorizontalAlignment="Left" Height="182" Margin="183,38,0,0" VerticalAlignment="Top" Width="136"/>
         <Image x:Name="PlayerCard2" HorizontalAlignment="Left" Height="182" Margin="324,240,0,0" VerticalAlignment="Top" Width="136"/>
         <Image x:Name="DealerCard2" HorizontalAlignment="Left" Height="182" Margin="324,38,0,0" VerticalAlignment="Top" Width="136"/>
         <Image x:Name="Chips" HorizontalAlignment="Center" Height="144" Margin="0,636,0,0" VerticalAlignment="Top" Width="1536" Source="/Resources/chips.png" Stretch="UniformToFill"/>
-        <Button x:Name="Startbtn" Content="Start" Margin="989,642,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Startbtn_Click" FontSize="20" FontWeight="Bold" AutomationProperties.AccessKey="1"/>
+        <Button x:Name="Startbtn" Content="Start" Margin="989,642,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Startbtn_Click" FontSize="20" FontWeight="Bold" AutomationProperties.AccessKey="1" IsEnabled="False"/>
         <Button x:Name="Hitbtn" Content="Hit" Margin="989,713,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Hitbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
         <Button x:Name="Standbtn" Content="Stand" Margin="1206,713,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Standbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
         <Button x:Name="PlaceBetbtn" Content="Place Bet" Margin="1206,642,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="PlaceBetbtn_Click" FontSize="20" FontWeight="Bold" />
