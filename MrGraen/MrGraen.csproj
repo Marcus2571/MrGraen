@@ -119,11 +119,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Card.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="Blackjack.xaml.cs">
+      <DependentUpon>Blackjack.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -180,6 +185,8 @@
     <Content Include="Resources\AH.png" />
     <Content Include="Resources\AS.png" />
     <Content Include="Resources\b1fv.png" />
+    <Content Include="Resources\Blackjack.jpg" />
+    <Content Include="Resources\chips.png" />
     <Content Include="Resources\greenfelt.jpg" />
     <Content Include="Resources\JC.png" />
     <Content Include="Resources\JD.png" />
@@ -193,6 +200,7 @@
     <Content Include="Resources\QD.png" />
     <Content Include="Resources\QH.png" />
     <Content Include="Resources\QS.png" />
+    <Content Include="Resources\Roulette.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -200,6 +208,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Blackjack.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
