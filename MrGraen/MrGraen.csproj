@@ -127,10 +127,6 @@
     </Compile>
     <Compile Include="obj\x64\Debug\.NETCore,Version=v5.0.AssemblyAttributes.cs" />
     <Compile Include="obj\x64\Debug\App.g.cs" />
-    <Compile Include="obj\x64\Debug\App.g.i.cs" />
-    <Compile Include="obj\x64\Debug\MainPage.g.cs" />
-    <Compile Include="obj\x64\Debug\MainPage.g.i.cs" />
-    <Compile Include="obj\x64\Debug\XamlTypeInfo.g.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

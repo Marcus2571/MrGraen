@@ -37,7 +37,12 @@ namespace MrGraen
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(Roulette));
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Blackjack));
         }
     }
 }
