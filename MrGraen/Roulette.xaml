@@ -5,82 +5,12 @@
     xmlns:local="using:MrGraen"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Background="#FF00813E" Height="1123" Width="1536">
+    mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Background="#FF00813E" Height="1080" Width="1920">
 
-    <Page.Resources>
-        <Style x:Key="CircleButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
-            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
-            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundTransparentBrush}"/>
-            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
-            <Setter Property="Padding" Value="8,4,8,4"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
-            <Setter Property="FontWeight" Value="Normal"/>
-            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
-            <Setter Property="UseSystemFocusVisuals" Value="True"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid x:Name="RootGrid">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal">
-                                        <Storyboard>
-                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="PointerOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BorderCircle">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseMediumLowBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseHighBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BorderCircle">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseMediumLowBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseHighBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Disabled">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BorderCircle">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="BorderCircle">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <ContentPresenter x:Name="ContentPresenter" VerticalAlignment="Center" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            <Ellipse x:Name="BorderCircle" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="2"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
-
-    <Grid Margin="0,0,0,307">
+    <Grid Width="1536" Margin="192,0,192,215">
         <Image HorizontalAlignment="Left" Height="487" Margin="10,95,0,0" VerticalAlignment="Top" Width="505" Source="/Assets/blackjack-wheel.png"/>
-        <Image HorizontalAlignment="Center" Height="124" Margin="0,672,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
         <Image HorizontalAlignment="Left" Height="365" Margin="558,216,0,0" VerticalAlignment="Top" Width="817" Source="/Assets/Roulette.jpg"/>
+        <Image HorizontalAlignment="Center" Height="124" Margin="0,666,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
         <Button x:Name="Green0Button" Height="179" Margin="571,236,0,0" VerticalAlignment="Top" Width="59" Click="Green0Button_Click"/>
         <Button x:Name="ButtonRed" Content="Red" Margin="866,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonRed_Click"/>
         <Button x:Name="ButtonBlack" Content="Black" Margin="979,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonBlack_Click"/>
@@ -132,13 +62,109 @@
         <Button x:Name="ButtonLine3" Margin="1312,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine3_Click"/>
         <Button x:Name="SpinButton" Content="Spin" Margin="922,688,0,0" VerticalAlignment="Top" Width="191" Height="93" Click="SpinButton_Click"/>
         <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" Margin="170,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44"/>
-        <Button x:Name="Bet5Button" Height="111" Margin="154,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet5Button_Click" CornerRadius="60"/>
-        <Button x:Name="Bet25Button" Height="114" Margin="299,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet25Button_Click" CornerRadius="60"/>
-        <Button x:Name="Bet500Button" Height="114" Margin="590,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet500Button_Click" CornerRadius="60"/>
-        <Button x:Name="Bet100Button" Height="114" Margin="445,678,0,0" VerticalAlignment="Top" Width="114" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" />
-        <Button x:Name="Bet1000Button" Height="114" Margin="734,677,0,0" VerticalAlignment="Top" Width="114" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60"/>
+        <Button x:Name="Bet1Button" Height="111" Margin="15,674,0,0" VerticalAlignment="Top" Width="108" Click="Bet1Button_Click" CornerRadius="60" >
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Black"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Bet5Button" Height="111" Margin="159,674,0,0" VerticalAlignment="Top" Width="108" Click="Bet5Button_Click" CornerRadius="65" >
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Black"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Bet25Button" Height="111" Margin="304,674,0,0" VerticalAlignment="Top" Width="108" Click="Bet25Button_Click" CornerRadius="60" >
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Black"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Bet500Button" Height="111" Margin="593,674,0,0" VerticalAlignment="Top" Width="109" Click="Bet500Button_Click" CornerRadius="60" >
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Black"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Bet100Button" Height="111" Margin="449,674,0,0" VerticalAlignment="Top" Width="109" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" >
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Black"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Bet1000Button" Height="111" Margin="738,674,0,0" VerticalAlignment="Top" Width="108" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60" >
+            <Button.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Black"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Red"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" Opacity="0.1"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Button.Resources>
+        </Button>
         <TextBlock x:Name="balanceLabel" HorizontalAlignment="Left" Margin="1205,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44" Text="Balance: " FontSize="22"/>
-        <Button x:Name="Bet1Button" Height="111" Margin="10,678,0,0" VerticalAlignment="Top" Width="114" Click="Bet1Button_Click" CornerRadius="60"/>
     </Grid>
 
 </Page>
