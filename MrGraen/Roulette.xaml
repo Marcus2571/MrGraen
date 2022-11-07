@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Background="#FF00813E" Height="1080" Width="1920">
 
-    <Grid Width="1536" Margin="192,0,192,215">
+    <Grid Width="1536" Margin="156,0,228,215">
         <Image HorizontalAlignment="Left" Height="487" Margin="10,95,0,0" VerticalAlignment="Top" Width="505" Source="/Assets/blackjack-wheel.png"/>
         <Image HorizontalAlignment="Left" Height="365" Margin="558,216,0,0" VerticalAlignment="Top" Width="817" Source="/Assets/Roulette.jpg"/>
         <Image HorizontalAlignment="Center" Height="124" Margin="0,666,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
