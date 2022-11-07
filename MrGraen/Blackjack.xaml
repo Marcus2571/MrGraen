@@ -89,7 +89,7 @@
 
 
 
-    <Grid x:Name="blackjackGrid" Width="1536" Margin="156,0,228,215">
+    <Grid x:Name="blackjackGrid" Width="1536" Margin="0,0,384,296">
         <TextBox x:Name="PlayerCardSumLbl" HorizontalAlignment="Left" Margin="10,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False" FontWeight="Bold" Opacity="0.8"/>
         <TextBox x:Name="DealerCardSumLbl" HorizontalAlignment="Left" Margin="10,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" IsHitTestVisible="False" IsTabStop="False" IsTextPredictionEnabled="False" Opacity="0.8"/>
         <TextBox x:Name="PlayerCardsLbl" HorizontalAlignment="Left" Margin="10,313,0,0" TextWrapping="Wrap" Text="Player Cards:" VerticalAlignment="Top" Height="46" Width="150" IsReadOnly="True" FontSize="20" FontWeight="Bold" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" AllowFocusOnInteraction="False" IsTextPredictionEnabled="False" IsHitTestVisible="False" IsTabStop="False"/>
@@ -104,12 +104,12 @@
         <Image x:Name="DealerCard1" HorizontalAlignment="Left" Height="182" Margin="183,38,0,0" VerticalAlignment="Top" Width="136"/>
         <Image x:Name="PlayerCard2" HorizontalAlignment="Left" Height="182" Margin="324,240,0,0" VerticalAlignment="Top" Width="136"/>
         <Image x:Name="DealerCard2" HorizontalAlignment="Left" Height="182" Margin="324,38,0,0" VerticalAlignment="Top" Width="136"/>
-        <Image x:Name="Chips" HorizontalAlignment="Center" Height="144" Margin="0,717,0,0" VerticalAlignment="Top" Width="1536" Source="/Resources/chips.png" Stretch="UniformToFill"/>
-        <Button x:Name="Startbtn" Content="Start" Margin="989,723,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Startbtn_Click" FontSize="20" FontWeight="Bold" AutomationProperties.AccessKey="1"/>
-        <Button x:Name="Hitbtn" Content="Hit" Margin="989,794,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Hitbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
-        <Button x:Name="Standbtn" Content="Stand" Margin="1206,794,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Standbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
-        <Button x:Name="PlaceBetbtn" Content="Place Bet" Margin="1206,723,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="PlaceBetbtn_Click" FontSize="20" FontWeight="Bold" />
-        <Button x:Name="Chip1btn" Height="122" Margin="14,723,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip1btn_Click" >
+        <Image x:Name="Chips" HorizontalAlignment="Center" Height="144" Margin="0,636,0,0" VerticalAlignment="Top" Width="1536" Source="/Resources/chips.png" Stretch="UniformToFill"/>
+        <Button x:Name="Startbtn" Content="Start" Margin="989,642,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Startbtn_Click" FontSize="20" FontWeight="Bold" AutomationProperties.AccessKey="1"/>
+        <Button x:Name="Hitbtn" Content="Hit" Margin="989,713,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Hitbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
+        <Button x:Name="Standbtn" Content="Stand" Margin="1206,713,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="Standbtn_Click" FontSize="20" FontWeight="Bold" IsEnabled="False"/>
+        <Button x:Name="PlaceBetbtn" Content="Place Bet" Margin="1206,642,0,0" VerticalAlignment="Top" Height="57" Width="211" Click="PlaceBetbtn_Click" FontSize="20" FontWeight="Bold" />
+        <Button x:Name="Chip1btn" Height="122" Margin="14,642,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip1btn_Click" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -126,7 +126,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Chip5btn" Height="122" Margin="168,723,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip5btn_Click" >
+        <Button x:Name="Chip5btn" Height="122" Margin="168,642,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip5btn_Click" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -143,7 +143,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Chip25btn" Height="122" Margin="324,723,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip25btn_Click" >
+        <Button x:Name="Chip25btn" Height="122" Margin="324,642,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip25btn_Click" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -160,7 +160,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Chip100btn" Height="122" Margin="480,723,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip100btn_Click" >
+        <Button x:Name="Chip100btn" Height="122" Margin="480,642,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip100btn_Click" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -177,7 +177,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Chip500btn" Height="122" Margin="634,723,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip500btn_Click" >
+        <Button x:Name="Chip500btn" Height="122" Margin="634,642,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip500btn_Click" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -194,7 +194,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Chip1000btn" Height="122" Margin="789,723,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip1000btn_Click" >
+        <Button x:Name="Chip1000btn" Height="122" Margin="789,642,0,0" VerticalAlignment="Top" Width="118" CornerRadius="65" Click="Chip1000btn_Click" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
