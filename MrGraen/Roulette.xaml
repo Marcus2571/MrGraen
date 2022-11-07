@@ -7,62 +7,62 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Visibility="Visible" RequestedTheme="Default" Background="#FF00813E" Height="1080" Width="1920">
 
-    <Grid Width="1536" Margin="156,0,228,215">
-        <Image HorizontalAlignment="Left" Height="487" Margin="10,95,0,0" VerticalAlignment="Top" Width="505" Source="/Assets/blackjack-wheel.png"/>
-        <Image HorizontalAlignment="Left" Height="365" Margin="558,216,0,0" VerticalAlignment="Top" Width="817" Source="/Assets/Roulette.jpg"/>
-        <Image HorizontalAlignment="Center" Height="124" Margin="0,666,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
-        <Button x:Name="Green0Button" Height="179" Margin="571,236,0,0" VerticalAlignment="Top" Width="59" Click="Green0Button_Click"/>
-        <Button x:Name="ButtonRed" Content="Red" Margin="866,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonRed_Click"/>
-        <Button x:Name="ButtonBlack" Content="Black" Margin="979,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonBlack_Click"/>
-        <Button x:Name="OddButton" Content="" Margin="1090,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="OddButton_Click"/>
-        <Button x:Name="EvenButton" Content="" Margin="753,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="EvenButton_Click"/>
-        <Button x:Name="Button1to12" Margin="636,425,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button1to12_Click"/>
-        <Button x:Name="Button12to24" Margin="864,425,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button12to24_Click"/>
-        <Button x:Name="Button24to36" Margin="1088,425,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button24to36_Click"/>
-        <Button x:Name="Button1to18" Content="" Margin="641,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="Button1to18_Click"/>
-        <Button x:Name="Button19to36" Content="" Margin="1205,487,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="Button19to36_Click"/>
-        <Button x:Name="Button3" Margin="638,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button3_Click"/>
-        <Button x:Name="Button2" Margin="638,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button2_Click"/>
-        <Button x:Name="Button1" Margin="638,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button1_Click"/>
-        <Button x:Name="Button4" Margin="694,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button4_Click"/>
-        <Button x:Name="Button5" Margin="694,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button5_Click"/>
-        <Button x:Name="Button6" Margin="694,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button6_Click"/>
-        <Button x:Name="Button9" Margin="748,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button9_Click"/>
-        <Button x:Name="Button8" Margin="750,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button8_Click"/>
-        <Button x:Name="Button7" Margin="748,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button7_Click"/>
-        <Button x:Name="Button10" Margin="806,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button10_Click"/>
-        <Button x:Name="Button11" Margin="806,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button11_Click"/>
-        <Button x:Name="Button12" Margin="806,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button12_Click"/>
-        <Button x:Name="Button15" Margin="862,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button15_Click"/>
-        <Button x:Name="Button14" Margin="862,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button14_Click"/>
-        <Button x:Name="Button13" Margin="862,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button13_Click"/>
-        <Button x:Name="Button16" Margin="918,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button16_Click"/>
-        <Button x:Name="Button17" Margin="918,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button17_Click"/>
-        <Button x:Name="Button18" Margin="918,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button18_Click"/>
-        <Button x:Name="Button21" Margin="974,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button21_Click"/>
-        <Button x:Name="Button20" Margin="974,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button20_Click"/>
-        <Button x:Name="Button19" Margin="974,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button19_Click"/>
-        <Button x:Name="Button22" Margin="1030,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button22_Click"/>
-        <Button x:Name="Button23" Margin="1030,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button23_Click"/>
-        <Button x:Name="Button24" Margin="1030,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button24_Click"/>
-        <Button x:Name="Button27" Margin="1088,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button27_Click"/>
-        <Button x:Name="Button26" Margin="1088,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button26_Click"/>
-        <Button x:Name="Button25" Margin="1088,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button25_Click"/>
-        <Button x:Name="Button28" Margin="1144,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button28_Click"/>
-        <Button x:Name="Button29" Margin="1144,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button29_Click"/>
-        <Button x:Name="Button30" Margin="1144,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button30_Click"/>
-        <Button x:Name="Button33" Margin="1200,235,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button33_Click"/>
-        <Button x:Name="Button32" Margin="1200,299,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button32_Click"/>
-        <Button x:Name="Button31" Margin="1200,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button31_Click"/>
-        <Button x:Name="Button34" Margin="1256,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button34_Click"/>
-        <Button x:Name="Button35" Margin="1256,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button35_Click"/>
-        <Button x:Name="Button36" Margin="1256,235,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button36_Click"/>
-        <Button x:Name="ButtonLine1" Margin="1312,236,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine1_Click"/>
-        <Button x:Name="ButtonLine2" Margin="1312,299,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine2_Click"/>
-        <Button x:Name="ButtonLine3" Margin="1312,363,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine3_Click"/>
-        <Button x:Name="SpinButton" Content="Spin" Margin="922,688,0,0" VerticalAlignment="Top" Width="191" Height="93" Click="SpinButton_Click"/>
-        <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" Margin="170,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44"/>
-        <Button x:Name="Bet1Button" Height="111" Margin="15,674,0,0" VerticalAlignment="Top" Width="108" Click="Bet1Button_Click" CornerRadius="60" >
+    <Grid Width="1536" Margin="10,0,374,215">
+        <Image HorizontalAlignment="Left" Height="487" Margin="10,20,0,0" VerticalAlignment="Top" Width="505" Source="/Assets/blackjack-wheel.png"/>
+        <Image HorizontalAlignment="Left" Height="365" Margin="558,141,0,0" VerticalAlignment="Top" Width="817" Source="/Assets/Roulette.jpg"/>
+        <Image HorizontalAlignment="Center" Height="124" Margin="0,591,0,0" VerticalAlignment="Top" Width="1535" Source="/Assets/chips.png" Stretch="UniformToFill"/>
+        <Button x:Name="Green0Button" Height="179" Margin="571,161,0,0" VerticalAlignment="Top" Width="59" Click="Green0Button_Click"/>
+        <Button x:Name="ButtonRed" Content="Red" Margin="866,412,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonRed_Click"/>
+        <Button x:Name="ButtonBlack" Content="Black" Margin="979,412,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="ButtonBlack_Click"/>
+        <Button x:Name="OddButton" Content="" Margin="1090,412,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="OddButton_Click"/>
+        <Button x:Name="EvenButton" Content="" Margin="753,412,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="EvenButton_Click"/>
+        <Button x:Name="Button1to12" Margin="636,350,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button1to12_Click"/>
+        <Button x:Name="Button12to24" Margin="864,350,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button12to24_Click"/>
+        <Button x:Name="Button24to36" Margin="1088,350,0,0" VerticalAlignment="Top" Height="56" Width="219" Click="Button24to36_Click"/>
+        <Button x:Name="Button1to18" Content="" Margin="641,412,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="Button1to18_Click"/>
+        <Button x:Name="Button19to36" Content="" Margin="1205,412,0,0" VerticalAlignment="Top" Height="56" Width="102" Click="Button19to36_Click"/>
+        <Button x:Name="Button3" Margin="638,160,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button3_Click"/>
+        <Button x:Name="Button2" Margin="638,224,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button2_Click"/>
+        <Button x:Name="Button1" Margin="638,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button1_Click"/>
+        <Button x:Name="Button4" Margin="694,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button4_Click"/>
+        <Button x:Name="Button5" Margin="694,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button5_Click"/>
+        <Button x:Name="Button6" Margin="694,160,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button6_Click"/>
+        <Button x:Name="Button9" Margin="748,160,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button9_Click"/>
+        <Button x:Name="Button8" Margin="750,224,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button8_Click"/>
+        <Button x:Name="Button7" Margin="748,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button7_Click"/>
+        <Button x:Name="Button10" Margin="806,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button10_Click"/>
+        <Button x:Name="Button11" Margin="806,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button11_Click"/>
+        <Button x:Name="Button12" Margin="806,160,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button12_Click"/>
+        <Button x:Name="Button15" Margin="862,160,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button15_Click"/>
+        <Button x:Name="Button14" Margin="862,224,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button14_Click"/>
+        <Button x:Name="Button13" Margin="862,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button13_Click"/>
+        <Button x:Name="Button16" Margin="918,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button16_Click"/>
+        <Button x:Name="Button17" Margin="918,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button17_Click"/>
+        <Button x:Name="Button18" Margin="918,160,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button18_Click"/>
+        <Button x:Name="Button21" Margin="974,160,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button21_Click"/>
+        <Button x:Name="Button20" Margin="974,224,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button20_Click"/>
+        <Button x:Name="Button19" Margin="974,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button19_Click"/>
+        <Button x:Name="Button22" Margin="1030,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button22_Click"/>
+        <Button x:Name="Button23" Margin="1030,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button23_Click"/>
+        <Button x:Name="Button24" Margin="1030,160,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button24_Click"/>
+        <Button x:Name="Button27" Margin="1088,160,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button27_Click"/>
+        <Button x:Name="Button26" Margin="1088,224,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button26_Click"/>
+        <Button x:Name="Button25" Margin="1088,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button25_Click"/>
+        <Button x:Name="Button28" Margin="1144,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button28_Click"/>
+        <Button x:Name="Button29" Margin="1144,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button29_Click"/>
+        <Button x:Name="Button30" Margin="1144,160,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button30_Click"/>
+        <Button x:Name="Button33" Margin="1200,160,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button33_Click"/>
+        <Button x:Name="Button32" Margin="1200,224,0,0" VerticalAlignment="Top" Width="51" Height="53" Click="Button32_Click"/>
+        <Button x:Name="Button31" Margin="1200,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button31_Click"/>
+        <Button x:Name="Button34" Margin="1256,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button34_Click"/>
+        <Button x:Name="Button35" Margin="1256,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button35_Click"/>
+        <Button x:Name="Button36" Margin="1256,160,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="Button36_Click"/>
+        <Button x:Name="ButtonLine1" Margin="1312,161,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine1_Click"/>
+        <Button x:Name="ButtonLine2" Margin="1312,224,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine2_Click"/>
+        <Button x:Name="ButtonLine3" Margin="1312,288,0,0" Width="51" Height="53" VerticalAlignment="Top" Click="ButtonLine3_Click"/>
+        <Button x:Name="SpinButton" Content="Spin" Margin="922,613,0,0" VerticalAlignment="Top" Width="191" Height="93" Click="SpinButton_Click"/>
+        <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" Margin="170,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="44"/>
+        <Button x:Name="Bet1Button" Height="111" Margin="15,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet1Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -79,7 +79,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet5Button" Height="111" Margin="159,674,0,0" VerticalAlignment="Top" Width="108" Click="Bet5Button_Click" CornerRadius="65" >
+        <Button x:Name="Bet5Button" Height="111" Margin="159,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet5Button_Click" CornerRadius="65" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -96,7 +96,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet25Button" Height="111" Margin="304,674,0,0" VerticalAlignment="Top" Width="108" Click="Bet25Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet25Button" Height="111" Margin="304,599,0,0" VerticalAlignment="Top" Width="108" Click="Bet25Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -113,7 +113,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet500Button" Height="111" Margin="593,674,0,0" VerticalAlignment="Top" Width="109" Click="Bet500Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet500Button" Height="111" Margin="593,599,0,0" VerticalAlignment="Top" Width="109" Click="Bet500Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -130,7 +130,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet100Button" Height="111" Margin="449,674,0,0" VerticalAlignment="Top" Width="109" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet100Button" Height="111" Margin="449,599,0,0" VerticalAlignment="Top" Width="109" FontSize="13" Click="Bet100Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -147,7 +147,7 @@
                 </ResourceDictionary>
             </Button.Resources>
         </Button>
-        <Button x:Name="Bet1000Button" Height="111" Margin="738,674,0,0" VerticalAlignment="Top" Width="108" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60" >
+        <Button x:Name="Bet1000Button" Height="111" Margin="738,599,0,0" VerticalAlignment="Top" Width="108" FontSize="9" Click="Bet1000Button_Click" CornerRadius="60" >
             <Button.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
