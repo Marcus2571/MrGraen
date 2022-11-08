@@ -24,7 +24,7 @@ namespace MrGraen
     /// </summary>
     public sealed partial class Roulette : Page
     {
-        double balance = 10000;
+        double balance = Player.Balance;
         double betAmountChoosen = 0;
         bool betPlaced = false;
         string buttonPressed = "";

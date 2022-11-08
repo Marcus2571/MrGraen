@@ -35,7 +35,6 @@ namespace MrGraen
             BetSumLbl.Text = bet.ToString();
             BalanceSumLbl.Text = Player.Balance.ToString();
         }
-        //Player Player = new Player(10000);
 
         int bet = 0;
 
