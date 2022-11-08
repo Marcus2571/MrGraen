@@ -127,9 +127,6 @@
     </Compile>
     <Compile Include="obj\x64\Debug\.NETCore,Version=v5.0.AssemblyAttributes.cs" />
     <Compile Include="obj\x64\Debug\App.g.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="Blackjack.xaml.cs">
@@ -237,6 +234,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="obj\MrGraen.csproj.nuget.dgspec.json" />
     <None Include="obj\MrGraen.csproj.nuget.g.props" />
     <None Include="obj\MrGraen.csproj.nuget.g.targets" />
