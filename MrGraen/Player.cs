@@ -11,10 +11,5 @@ namespace MrGraen
         public static int Id { get; set; }
         public static string Name { get; set; }
         public static double Balance = 10000;
-
-        //public Player(double balance)
-        //{
-        //    Balance = balance;
-        //}
     }
 }
