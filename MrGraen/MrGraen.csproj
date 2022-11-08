@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ICard.cs" />
     <Compile Include="Roulette.xaml.cs">
       <DependentUpon>Roulette.xaml</DependentUpon>
     </Compile>
