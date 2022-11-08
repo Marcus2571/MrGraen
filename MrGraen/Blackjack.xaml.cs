@@ -30,6 +30,7 @@ namespace MrGraen
         {
             this.InitializeComponent();
 
+            // Running populate deck on different thread to avoid having to wait for the cards to be added to the deck
             new Thread(new ThreadStart(PopulateDeck)).Start();
 
             BetSumLbl.Text = bet.ToString();
@@ -37,7 +38,6 @@ namespace MrGraen
         }
 
         int bet = 0;
-
 
         List<Card> playerCardList = new List<Card>();
 
@@ -49,12 +49,15 @@ namespace MrGraen
         int playerCardSum = 0;
         int dealerCardSum = 0;
         Random random = new Random();
+
+        // A list to keep track of the extra cards add to the player/dealers hand
         List<Image> playerBox = new List<Image>();
         List<Image> dealerBox = new List<Image>();
 
 
         #region Deck
 
+        // Creation of decks
 
         List<Card> deck1 = new List<Card>()
         {
@@ -230,6 +233,7 @@ namespace MrGraen
             playerCardSum = 0;
             dealerCardSum = 0;
 
+            // Dealing cards to player and dealer
             Card playerCard1 = totalDeck[SelectRandomCard()];
             totalDeck.Remove(playerCard1);
             playerCardList.Add(playerCard1);
@@ -248,6 +252,7 @@ namespace MrGraen
 
             DisplayCard(PlayerCard1, playerCard1.Image);
 
+            // Wait 500 milliseconds on another thread to make sure the UI updates
             await Task.Run(() => Thread.Sleep(500));
             DisplayCard(DealerCard1, dealerCard1.Image);
 
@@ -305,6 +310,9 @@ namespace MrGraen
             Standbtn.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Restart game and reset all values
+        /// </summary>
         private void ResetGame()
         {
             PlayerCardSumLbl.Text = "";
@@ -341,6 +349,9 @@ namespace MrGraen
             BetSumLbl.Text = bet.ToString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private async void PlayDealer()
         {
             await Task.Run(() => Thread.Sleep(500));
@@ -581,6 +592,11 @@ namespace MrGraen
         private void Chip1000btn_Click(object sender, RoutedEventArgs e)
         {
             UpdateBet(1000);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
