@@ -44,6 +44,7 @@ namespace MrGraen
         public void updateBalance()
         {
             balanceLabel.Text = $"Balance: {balance}";
+            Player.Balance = balance;
         }
         public async void chooseBet(Button sender)
         {
