@@ -33,8 +33,6 @@ namespace MrGraen
         public MainPage()
         {
             this.InitializeComponent();
-
-            Player.Balance = 10000;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
