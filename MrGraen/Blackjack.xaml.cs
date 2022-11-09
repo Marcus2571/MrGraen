@@ -59,88 +59,7 @@ namespace MrGraen
 
         // Creation of decks
 
-        List<Card> deck1 = new List<Card>()
-        {
-            #region Clubs
-
-            new Card() { Value = 11, Name = "Ace Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/AC.png")) },
-            new Card() { Value = 2, Name = "Two Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/2C.png")) },
-            new Card() { Value = 3, Name = "Three Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/3C.png")) },
-            new Card() { Value = 4, Name = "Four Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/4C.png")) },
-            new Card() { Value = 5, Name = "Five Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/5C.png")) },
-            new Card() { Value = 6, Name = "Six Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/6C.png")) },
-            new Card() { Value = 7, Name = "Seven Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/7C.png")) },
-            new Card() { Value = 8, Name = "Eigth Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/8C.png")) },
-            new Card() { Value = 9, Name = "Nine Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/9C.png")) },
-            new Card() { Value = 10, Name = "Ten Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/10C.png")) },
-            new Card() { Value = 10, Name = "Jack Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/JC.png")) },
-            new Card() { Value = 10, Name = "Queen Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/QC.png")) },
-            new Card() { Value = 10, Name = "King Clubs", Image = new BitmapImage(new Uri("ms-appx:///Resources/KC.png")) },
-
-            #endregion
-
-            #region Spades
-
-
-            new Card() { Value = 11, Name = "Ace Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/AS.png")) },
-            new Card() { Value = 2, Name = "Two Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/2S.png")) },
-            new Card() { Value = 3, Name = "Three Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/3S.png")) },
-            new Card() { Value = 4, Name = "Four Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/4S.png")) },
-            new Card() { Value = 5, Name = "Five Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/5S.png")) },
-            new Card() { Value = 6, Name = "Six Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/6S.png")) },
-            new Card() { Value = 7, Name = "Seven Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/7S.png")) },
-            new Card() { Value = 8, Name = "Eigth Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/8S.png")) },
-            new Card() { Value = 9, Name = "Nine Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/9S.png")) },
-            new Card() { Value = 10, Name = "Ten Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/10S.png")) },
-            new Card() { Value = 10, Name = "Jack Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/JS.png")) },
-            new Card() { Value = 10, Name = "Queen Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/QS.png")) },
-            new Card() { Value = 10, Name = "King Spades", Image = new BitmapImage(new Uri("ms-appx:///Resources/KS.png")) },
-
-
-            #endregion
-            
-            #region Hearts
-
-
-            new Card() { Value = 11, Name = "Ace Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/AH.png")) },
-            new Card() { Value = 2, Name = "Two Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/2H.png")) },
-            new Card() { Value = 3, Name = "Three Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/3H.png")) },
-            new Card() { Value = 4, Name = "Four Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/4H.png")) },
-            new Card() { Value = 5, Name = "Five Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/5H.png")) },
-            new Card() { Value = 6, Name = "Six Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/6H.png")) },
-            new Card() { Value = 7, Name = "Seven Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/7H.png")) },
-            new Card() { Value = 8, Name = "Eigth Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/8H.png")) },
-            new Card() { Value = 9, Name = "Nine Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/9H.png")) },
-            new Card() { Value = 10, Name = "Ten Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/10H.png")) },
-            new Card() { Value = 10, Name = "Jack Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/JH.png")) },
-            new Card() { Value = 10, Name = "Queen Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/QH.png")) },
-            new Card() { Value = 10, Name = "King Hearts", Image = new BitmapImage(new Uri("ms-appx:///Resources/KH.png")) },
-
-
-            #endregion
-
-            #region Diamonds
-
-
-            new Card() { Value = 11, Name = "Ace Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/AD.png")) },
-            new Card() { Value = 2, Name = "Two Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/2D.png")) },
-            new Card() { Value = 3, Name = "Three Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/3D.png")) },
-            new Card() { Value = 4, Name = "Four Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/4D.png")) },
-            new Card() { Value = 5, Name = "Five Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/5D.png")) },
-            new Card() { Value = 6, Name = "Six Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/6D.png")) },
-            new Card() { Value = 7, Name = "Seven Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/7D.png")) },
-            new Card() { Value = 8, Name = "Eigth Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/8D.png")) },
-            new Card() { Value = 9, Name = "Nine Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/9D.png")) },
-            new Card() { Value = 10, Name = "Ten Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/10D.png")) },
-            new Card() { Value = 10, Name = "Jack Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/JD.png")) },
-            new Card() { Value = 10, Name = "Queen Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/QD.png")) },
-            new Card() { Value = 10, Name = "King Diamonds", Image = new BitmapImage(new Uri("ms-appx:///Resources/KD.png")) }
-
-
-            #endregion
-        };
-
-        List<Card> deck2 = new List<Card>()
+        List<Card> deck = new List<Card>()
         {
             #region Clubs
 
@@ -541,13 +460,12 @@ namespace MrGraen
         /// </summary>
         private void PopulateDeck()
         {
-            foreach (var card in deck1)
+            for (int i = 0; i < 3; i++)
             {
-                totalDeck.Add(card);
-            }
-            foreach (var card in deck2)
-            {
-                totalDeck.Add(card);
+                foreach (var card in deck)
+                {
+                    totalDeck.Add(card);
+                }
             }
         }
 
