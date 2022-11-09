@@ -226,8 +226,15 @@ namespace MrGraen
 
         #endregion
 
+        /// <summary>
+        /// Starts the game when the start button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Startbtn_Click(object sender, RoutedEventArgs e)
         {
+            Startbtn.IsEnabled = false;
+
             playerCardMargin = PlayerCard2.Margin.Left;
             dealerCardMargin = DealerCard2.Margin.Left;
             playerCardSum = 0;
@@ -305,7 +312,6 @@ namespace MrGraen
                 DisplayCard(DealerCard2, new BitmapImage(new Uri("ms-appx:///Resources/b1fv.png")));
             }
 
-            Startbtn.IsEnabled = false;
             Hitbtn.IsEnabled = true;
             Standbtn.IsEnabled = true;
         }
@@ -344,13 +350,20 @@ namespace MrGraen
             Hitbtn.IsEnabled = false;
             Standbtn.IsEnabled = false;
             PlaceBetbtn.IsEnabled = true;
+            Chip1btn.IsEnabled = true;
+            Chip5btn.IsEnabled = true;
+            Chip25btn.IsEnabled = true;
+            Chip100btn.IsEnabled = true;
+            Chip500btn.IsEnabled = true;
+            Chip1000btn.IsEnabled = true;
+
 
             BalanceSumLbl.Text = Player.Balance.ToString();
             BetSumLbl.Text = bet.ToString();
         }
 
         /// <summary>
-        /// 
+        /// Starts dealers turn after the players turn is done
         /// </summary>
         private async void PlayDealer()
         {
@@ -415,6 +428,11 @@ namespace MrGraen
             }
         }
 
+        /// <summary>
+        /// Gives the player a card when the hit button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Hitbtn_Click(object sender, RoutedEventArgs e)
         {
             playerCardMargin += (PlayerCard2.Width + 5);
@@ -456,20 +474,41 @@ namespace MrGraen
             }
         }
 
+        /// <summary>
+        /// Ends the players turn and calls PlayerDealer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Standbtn_Click(object sender, RoutedEventArgs e)
         {
             Hitbtn.IsEnabled = false;
             PlayDealer();
         }
 
+        /// <summary>
+        /// Changes the source of an image to display the correct card
+        /// </summary>
+        /// <param name="image">The image to contain the card</param>
+        /// <param name="source">The card to be shown</param>
         private void DisplayCard(Image image, BitmapImage source)
         {
             image.Source = source;
         }
 
-
+        /// <summary>
+        /// Places the chosen bet ammount
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void PlaceBetbtn_Click(object sender, RoutedEventArgs e)
         {
+            Chip1btn.IsEnabled = false;
+            Chip5btn.IsEnabled = false;
+            Chip25btn.IsEnabled = false;
+            Chip100btn.IsEnabled = false;
+            Chip500btn.IsEnabled = false;
+            Chip1000btn.IsEnabled = false;
+
             if (bet <= 0 || bet > Player.Balance)
             {
                 await new MessageDialog($"You Must Place a Bet Higher Than 0 and Less Than {Player.Balance + 1}!", "Invalid Bet!").ShowAsync();
@@ -486,6 +525,10 @@ namespace MrGraen
             }
         }
 
+        /// <summary>
+        /// Selects a random card from the deck
+        /// </summary>
+        /// <returns>The index of a random card in the deck</returns>
         private int SelectRandomCard()
         {
             int randomCard;
@@ -493,6 +536,9 @@ namespace MrGraen
             return randomCard;
         }
 
+        /// <summary>
+        /// Populates the deck
+        /// </summary>
         private void PopulateDeck()
         {
             foreach (var card in deck1)
@@ -505,6 +551,9 @@ namespace MrGraen
             }
         }
 
+        /// <summary>
+        /// Calculates the total sum of the players hand
+        /// </summary>
         private void SumPlayerCards()
         {
             playerCardSum = 0;
@@ -528,6 +577,9 @@ namespace MrGraen
             }
         }
 
+        /// <summary>
+        /// Calculates the total sum of the dealers hand
+        /// </summary>
         private void SumDealerCards()
         {
             dealerCardSum = 0;
@@ -551,6 +603,10 @@ namespace MrGraen
             }
         }
 
+        /// <summary>
+        /// Updates the amount the player is going to bet
+        /// </summary>
+        /// <param name="playerBet"></param>
         private async void UpdateBet(int playerBet)
         {
 
@@ -564,6 +620,7 @@ namespace MrGraen
             BalanceSumLbl.Text = (Player.Balance - bet).ToString();
         }
 
+        #region Bet buttons
         private void Chip1btn_Click(object sender, RoutedEventArgs e)
         {
             UpdateBet(1);
@@ -593,7 +650,13 @@ namespace MrGraen
         {
             UpdateBet(1000);
         }
+        #endregion
 
+        /// <summary>
+        /// Goes back to main page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));

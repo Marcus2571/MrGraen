@@ -6,21 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Width="1920" Height="1077">
-    <Page.Background>
-        <ImageBrush ImageSource="/Resources/greenfelt.jpg"/>
-    </Page.Background>
 
 
 
-    <Grid x:Name="RootGrid">
-        <Image Height="516" Margin="159,0,1073,345" VerticalAlignment="Bottom" Width="688" Source="/Resources/Blackjack.jpg"/>
-        <Image Height="516" Margin="1020,216,212,345" Width="688" Source="/Resources/Roulette.png"/>
-        <Button Margin="159,216,1073,345" VerticalAlignment="Stretch" Click="Button_Click_1" Width="688" HorizontalAlignment="Stretch">
+    <Grid x:Name="RootGrid" Width="1536" Margin="0,0,384,296">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/greenfelt.jpg"/>
+        </Grid.Background>
+        <Image Height="368" Margin="216,0,818,0" VerticalAlignment="Center" Source="/Resources/Blackjack.jpg"/>
+        <Image Margin="871,207,171,206" Source="/Resources/Roulette.png"/>
+        <Button Margin="222,207,823,206" VerticalAlignment="Stretch" Click="Button_Click_1" HorizontalAlignment="Stretch">
             <Button.Background>
                 <SolidColorBrush Color="#33FFFFFF" Opacity="0"/>
             </Button.Background>
         </Button>
-        <Button Margin="1020,216,212,345" VerticalAlignment="Stretch" Click="Button_Click" Width="688" HorizontalAlignment="Stretch">
+        <Button Margin="873,207,172,206" VerticalAlignment="Stretch" Click="Button_Click" HorizontalAlignment="Stretch">
             <Button.Background>
                 <SolidColorBrush Color="#33FFFFFF" Opacity="0"/>
             </Button.Background>
