@@ -421,12 +421,6 @@ namespace MrGraen
         /// <param name="e"></param>
         private async void PlaceBetbtn_Click(object sender, RoutedEventArgs e)
         {
-            Chip1btn.IsEnabled = false;
-            Chip5btn.IsEnabled = false;
-            Chip25btn.IsEnabled = false;
-            Chip100btn.IsEnabled = false;
-            Chip500btn.IsEnabled = false;
-            Chip1000btn.IsEnabled = false;
 
             if (bet <= 0 || bet > Player.Balance)
             {
@@ -438,6 +432,12 @@ namespace MrGraen
             }
             else
             {
+                Chip1btn.IsEnabled = false;
+                Chip5btn.IsEnabled = false;
+                Chip25btn.IsEnabled = false;
+                Chip100btn.IsEnabled = false;
+                Chip500btn.IsEnabled = false;
+                Chip1000btn.IsEnabled = false;
                 Player.Balance -= bet;
                 Startbtn.IsEnabled = true;
                 PlaceBetbtn.IsEnabled = false;
