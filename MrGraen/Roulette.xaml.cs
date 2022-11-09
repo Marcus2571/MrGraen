@@ -44,13 +44,26 @@ namespace MrGraen
         public void updateBalance()
         {
             balanceLabel.Text = $"Balance: {balance}";
+            BetSumLbl.Text = $"Bet: {betAmountChoosen}";
             Player.Balance = balance;
+        }
+        private async void UpdateBet(int playerBet)
+        {
+
+            if (betAmountChoosen + playerBet > Player.Balance)
+            {
+                await new MessageDialog($"You Can Not Afford This Bet!", "Invalid Bet!").ShowAsync();
+                return;
+            }
+            betAmountChoosen += playerBet;
+            BetSumLbl.Text = $"Bet: {betAmountChoosen}";
+            balanceLabel.Text = $"Balance: {Player.Balance - betAmountChoosen}";
         }
         public async void chooseBet(Button sender)
         {
             if (betPlaced == false)
             {
-                if (betAmountChoosen <= balance)
+                if (betAmountChoosen <= balance && betAmountChoosen != 0)
                 {
                     balance -= betAmountChoosen;
                     updateBalance();
@@ -318,33 +331,33 @@ namespace MrGraen
         }
         private void Bet1Button_Click(object sender, RoutedEventArgs e)
         {
-            betAmountChoosen = 1;
+            UpdateBet(1);
 
         }
         private void Bet5Button_Click(object sender, RoutedEventArgs e)
         {
-            betAmountChoosen = 5;
+            UpdateBet(5);
 
         }
 
         private void Bet25Button_Click(object sender, RoutedEventArgs e)
         {
-            betAmountChoosen = 25;
+            UpdateBet(25);
         }
 
         private void Bet500Button_Click(object sender, RoutedEventArgs e)
         {
-            betAmountChoosen = 500;
+            UpdateBet(500);
         }
 
         private void Bet100Button_Click(object sender, RoutedEventArgs e)
         {
-            betAmountChoosen = 100;
+            UpdateBet(100);
         }
 
         private void Bet1000Button_Click(object sender, RoutedEventArgs e)
         {
-            betAmountChoosen = 1000;
+            UpdateBet(1000);
         }
         #endregion
 
@@ -418,6 +431,9 @@ namespace MrGraen
 
 
                 }
+                betAmountChoosen = 0;
+                updateBalance();
+
 
 
 
