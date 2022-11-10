@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HorseRace
 {
@@ -39,7 +41,7 @@ namespace HorseRace
             }
         }
 
-        private Horse? getWinner(){
+        internal Horse GetWinner(){
             Random rnd = new Random();
 
             int totalWeight = 0;
@@ -63,17 +65,17 @@ namespace HorseRace
 
         }
     }
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Race race1 = new Race(5);
-            // show horses
-            foreach (Horse horse in race1.Horses) {
-                Console.WriteLine(horse.Name + " " + horse.WinWeight);
-            }
-            Console.ReadLine();
-            Console.WriteLine(race1.getWinner().Name);
-        }
-    }
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Race race1 = new Race(5);
+    //        // show horses
+    //        foreach (Horse horse in race1.Horses) {
+    //            Console.WriteLine(horse.Name + " " + horse.WinWeight);
+    //        }
+    //        Console.ReadLine();
+    //        Console.WriteLine(race1.GetWinner().Name);
+    //    }
+    //}
 }

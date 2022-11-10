@@ -31,7 +31,9 @@ namespace MrGraen
             this.InitializeComponent();
 
             // Running populate deck on different thread to avoid having to wait for the cards to be added to the deck
-            new Thread(new ThreadStart(PopulateDeck)).Start();
+            //new Thread(new ThreadStart(PopulateDeck)).Start();
+            Thread populateDeckThread = new Thread(new ThreadStart(PopulateDeck));
+            populateDeckThread.Start();
 
             BetSumLbl.Text = bet.ToString();
             BalanceSumLbl.Text = Player.Balance.ToString();

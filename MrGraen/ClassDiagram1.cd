@@ -11,7 +11,7 @@
   <Class Name="MrGraen.Blackjack" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAEAAQIgCAAIGADAgAAmkAAoBQAIIQgAwEIAAAAJE=</HashCode>
+      <HashCode>AAAAEAAQIgCAAIGADAgAAmkAAgBQAMIQgAwEIAAAAJE=</HashCode>
       <FileName>Blackjack.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />

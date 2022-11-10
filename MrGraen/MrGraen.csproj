@@ -119,6 +119,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HorseRace.xaml.cs">
+      <DependentUpon>HorseRace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HorseRace.cs" />
     <Compile Include="ICard.cs" />
     <Compile Include="Roulette.xaml.cs">
       <DependentUpon>Roulette.xaml</DependentUpon>
@@ -197,6 +201,14 @@
     <Content Include="Resources\Blackjack.jpg" />
     <Content Include="Resources\chips.png" />
     <Content Include="Resources\greenfelt.jpg" />
+    <Content Include="Resources\Horse1.png" />
+    <Content Include="Resources\Horse2.png" />
+    <Content Include="Resources\Horse3.png" />
+    <Content Include="Resources\Horse4.png" />
+    <Content Include="Resources\Horse5.png" />
+    <Content Include="Resources\Horse6.png" />
+    <Content Include="Resources\Horse7.png" />
+    <Content Include="Resources\Horse8.png" />
     <Content Include="Resources\JC.png" />
     <Content Include="Resources\JD.png" />
     <Content Include="Resources\JH.png" />
@@ -209,6 +221,7 @@
     <Content Include="Resources\QD.png" />
     <Content Include="Resources\QH.png" />
     <Content Include="Resources\QS.png" />
+    <Content Include="Resources\RaceTrack.jpg" />
     <Content Include="Resources\Roulette.png" />
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +229,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="HorseRace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Roulette.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
