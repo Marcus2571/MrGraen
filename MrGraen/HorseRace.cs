@@ -5,10 +5,13 @@ using System.Linq;
 namespace HorseRace
 {
     class Horse {
+        public int Number { get; set; }
         public string Name { get; set; }
         public int WinWeight = (new Random()).Next(1, 100);
+        public double Speed = 1;
 
-        public Horse(string name) {
+        public Horse(int number, string name) {
+            Number = number;
             Name = name;
         }
 
@@ -23,7 +26,7 @@ namespace HorseRace
 
         public int HorsesAmount { get; set; }
 
-        private List<string> _names = new List<string>(){"Hans", "Grethe", "Kenneth", "Morten", "Hans", "Erape Tracer", "Ruth", "Jørgen", "Monster Cock"};
+        private List<string> _names = new List<string>(){"Hans", "Grethe", "Kenneth", "Morten", "Hans", "Erape", "Ruth", "Jørgen", "Giga Cock"};
 
         public Race(int horsesAmount) {
             HorsesAmount = horsesAmount;
@@ -42,7 +45,7 @@ namespace HorseRace
                     unusedNames = new List<string>(_names);
                 }
 
-                Horses.Add(new Horse(name));
+                Horses.Add(new Horse(i + 1, name));
             }
         }
 
@@ -70,17 +73,4 @@ namespace HorseRace
 
         }
     }
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        Race race1 = new Race(5);
-    //        // show horses
-    //        foreach (Horse horse in race1.Horses) {
-    //            Console.WriteLine(horse.Name + " " + horse.WinWeight);
-    //        }
-    //        Console.ReadLine();
-    //        Console.WriteLine(race1.GetWinner().Name);
-    //    }
-    //}
 }
