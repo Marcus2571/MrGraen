@@ -11,6 +11,11 @@ namespace HorseRace
         public Horse(string name) {
             Name = name;
         }
+
+        public double GetWinChance(List<Horse> horses) {
+            double totalWeight = horses.Sum(h => h.WinWeight);
+            return WinWeight / totalWeight;
+        }
     }
 
     class Race {
