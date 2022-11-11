@@ -48,6 +48,15 @@ namespace MrGraen
             Number6Win.Text = $"{race.Horses.Where(h => h.Number == 6).First().WinWeight}%";
             Number7Win.Text = $"{race.Horses.Where(h => h.Number == 7).First().WinWeight}%";
             Number8Win.Text = $"{race.Horses.Where(h => h.Number == 8).First().WinWeight}%";
+
+            Name1.Text = $"{race.Horses.Where(h => h.Number == 1).First().Name}";
+            Name2.Text = $"{race.Horses.Where(h => h.Number == 2).First().Name}";
+            Name3.Text = $"{race.Horses.Where(h => h.Number == 3).First().Name}";
+            Name4.Text = $"{race.Horses.Where(h => h.Number == 4).First().Name}";
+            Name5.Text = $"{race.Horses.Where(h => h.Number == 5).First().Name}";
+            Name6.Text = $"{race.Horses.Where(h => h.Number == 6).First().Name}";
+            Name7.Text = $"{race.Horses.Where(h => h.Number == 7).First().Name}";
+            Name8.Text = $"{race.Horses.Where(h => h.Number == 8).First().Name}";
         }
 
 
@@ -158,12 +167,10 @@ namespace MrGraen
 
         public int HorsesAmount { get; set; }
 
-        private List<string> _names = new List<string>() { "Hans", "Grethe", "Kenneth", "Morten", "Hans", "Erape Tracer", "Ruth", "Jørgen", "Monster Cock" };
+        private List<string> _names = new List<string>() { "Hans", "Grethe", "Kenneth", "Morten", "Hans", "Erape", "Ruth", "Cock", "Jørgen" };
 
         public Race(int horsesAmount)
         {
-            //HorseRace horseRace = new HorseRace();
-
             HorsesAmount = horsesAmount;
 
             Horses = new List<Horse>();
