@@ -13,14 +13,20 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/greenfelt.jpg"/>
         </Grid.Background>
-        <Image Height="368" Margin="216,0,818,0" VerticalAlignment="Center" Source="/Resources/Blackjack.jpg"/>
-        <Image Margin="871,207,171,206" Source="/Resources/Roulette.png"/>
-        <Button Margin="222,207,823,206" VerticalAlignment="Stretch" Click="Button_Click_1" HorizontalAlignment="Stretch">
+        <Image Height="368" Margin="216,391,818,0" VerticalAlignment="Top" Source="/Resources/Blackjack.jpg"/>
+        <Image Margin="871,391,171,22" Source="/Resources/Roulette.png"/>
+        <Button Margin="222,391,823,22" VerticalAlignment="Stretch" Click="Button_Click_1" HorizontalAlignment="Stretch">
             <Button.Background>
                 <SolidColorBrush Color="#33FFFFFF" Opacity="0"/>
             </Button.Background>
         </Button>
-        <Button Margin="873,207,172,206" VerticalAlignment="Stretch" Click="Button_Click" HorizontalAlignment="Stretch">
+        <Button Margin="873,391,172,22" VerticalAlignment="Stretch" Click="Button_Click" HorizontalAlignment="Stretch">
+            <Button.Background>
+                <SolidColorBrush Color="#33FFFFFF" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Center" Height="368" Margin="0,10,0,0" VerticalAlignment="Top" Width="491" Source="/Resources/Horserace.jpg" Stretch="Fill"/>
+        <Button Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="368" Width="491" Click="Button_Click_2">
             <Button.Background>
                 <SolidColorBrush Color="#33FFFFFF" Opacity="0"/>
             </Button.Background>

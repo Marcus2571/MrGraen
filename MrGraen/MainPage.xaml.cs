@@ -44,5 +44,10 @@ namespace MrGraen
         {
             this.Frame.Navigate(typeof(Blackjack));
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(HorseRace));
+        }
     }
 }
